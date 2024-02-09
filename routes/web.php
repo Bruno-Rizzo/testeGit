@@ -31,4 +31,8 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/teste', [TesteController::class, 'index'])->name('teste.index');
 
+Route::get('/config', function(){
+    return view('dashboard');
+})->name('config');
+
 require __DIR__.'/auth.php';
